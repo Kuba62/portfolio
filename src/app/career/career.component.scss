@@ -1,0 +1,149 @@
+h1{
+    text-align: center;
+    color: var(--light-grey);
+    font-size: 36px;
+}
+
+p{
+    line-height: 1.5;
+}
+.career-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    color: var(--light-grey);
+    text-align: center;
+    font-size: 24px;
+}
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    color: white;
+}
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 0;
+}
+
+.container{
+    padding: 10px 60px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.5;
+        scale: 0.8;
+    }
+   to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.left-container{
+    left: 0;
+}
+
+.container img{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: -40px;
+    top: 32px;
+    z-index: 3;
+    border-radius: 20px;
+}
+
+.right-container{
+    left: 50%;
+}
+
+.right-container img{
+    left: -40px;
+}
+
+.textbox{
+    padding: 20px 30px;
+    background-color: var(--dark-grey);
+    position: relative;
+    border-radius: 20px;
+    font-size: 15px;
+    animation: appear ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 48px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 16px solid var(--dark-grey);
+    right: -15px;
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 48px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 16px solid var(--dark-grey);
+    left: -15px;
+}
+
+@media screen and (max-width: 600px){
+    
+    .timeline{
+        margin: 50px auto;
+        max-width: 80vw;
+    }
+
+    .timeline::after{
+        left: 40px;
+    }
+
+    .container{
+        width: 100%;
+        padding: 20px 0px 20px 100px;
+    }
+
+    .left-container img, .right-container img{
+        left: 0px;
+    }
+
+    .right-container{
+        left: 0;
+    }
+
+    .textbox{
+        font-size: 12px;
+    }
+
+    .left-container-arrow, .right-container-arrow{
+        border-right: 16px solid var(--dark-grey);
+        border-left: 0;
+        left: -15px;
+        top: 40px;
+    }
+}

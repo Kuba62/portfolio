@@ -1,0 +1,65 @@
+.navbar{
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    margin: 10px 20px;
+    display: flex;  /* Makes <a> a flex container */
+    align-items: center; /* Vertically centers icons inside */
+    justify-content: center;
+}
+
+.icon-container{
+    padding: 10px 10px;
+}
+
+.icon-container:hover{
+    background-color: var(--purple);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+i{
+    font-size: 20px;
+    margin: 0;
+    display: block;
+    line-height: 1;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip); /* Fetch text from data attribute */
+    position: absolute;
+    top: 100%; /* Show tooltip above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-grey);
+    margin-top: 20px;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    font-size: 16px;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
