@@ -1,14 +1,16 @@
 .home-section{
-    min-height: 100vh;
+    padding: 20px;
 }
 
 .about-me{
     background-color: var(--dark-grey);
-    width: 45vw;
-    margin: 50px auto;
+    width: 750px;
+    max-width: 90%;
+    margin-inline: auto;
     padding: 30px;
     color: var(--light-grey);
     border-radius: 20px;
+    box-sizing: border-box;
 }
 
 .header{
@@ -35,7 +37,9 @@ p{
     line-height: 1.5;
 }
 
-button{
+a{
+    text-align: center;
+    text-decoration: none;
     background-color: var(--purple);
     color: var(--light-grey);
     border: none;
@@ -45,8 +49,54 @@ button{
     cursor: pointer;
     margin: 20px auto 0 auto;
     display: block;
+    width: fit-content;
 }
 
 i{
     margin-left: 10px;
+}
+
+@media (max-width: 1200px) {
+    .about-me {
+        width: 600px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-me {
+        width: 90%;
+        padding: 20px; 
+    }
+
+    
+}
+
+@media (max-width: 640px) {
+    .about-me {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column; 
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    img{
+        align-self: center;
+        margin: 10px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    h1{
+        font-size: 28px; 
+    }
 }

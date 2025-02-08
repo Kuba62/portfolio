@@ -1,13 +1,18 @@
 .contact-container {
     max-width: 500px;
-    margin: 80px auto;
+    margin-inline: auto;
     padding: 20px;
     border-radius: 15px;
     background-color: var(--dark-grey);
 }
 
-h1, h2{
+h2, p{
     text-align: center;
+}
+
+a{
+    color:var(--purple);
+    text-decoration: none;
 }
   
 form {

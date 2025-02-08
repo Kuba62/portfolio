@@ -1,12 +1,12 @@
 h1{
     text-align: center;
-    color: var(--light-grey);
     font-size: 36px;
 }
 
 p{
     line-height: 1.5;
 }
+
 .career-header{
     display: flex;
     flex-direction: row;
@@ -20,7 +20,7 @@ p{
 .timeline{
     position: relative;
     max-width: 1200px;
-    margin: 80px auto;
+    margin-inline: auto;
 }
 
 .timeline::after{

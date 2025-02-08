@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
@@ -9,5 +9,4 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
 }

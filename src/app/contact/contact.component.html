@@ -1,32 +1,38 @@
-<h1>
-  <i class="fa-solid fa-envelope"></i> Contact
-</h1>
-<div class="contact-container">
-  <h2>Let's get in touch!</h2>
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <label >Name:</label>
-    <input id="name" type="text" formControlName="name" placeholder="Name"/>
-    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-      <small class="error">Name is required.</small>
-    </div>
-    <label>Email:</label>
-    <input type="email" formControlName="email" placeholder="Email" />
-    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-      <small class="error" *ngIf="contactForm.get('email')?.hasError('required')">Email is required.</small>
-      <small class="error" *ngIf="contactForm.get('email')?.hasError('email')">Invalid email address.</small>
-    </div>
-    <label>Message:</label>
-    <textarea formControlName="message" placeholder="Message"></textarea>
-    <small class="error" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">
-      Message is required.
-    </small>
-    <button type="submit">
-      <div *ngIf="messageSent; else submitText">
-        Thanks for reaching out!
+<section id="contact">
+  <h1 class="section-header">
+    <i class="fa-solid fa-envelope"></i> Contact
+  </h1>
+  <div class="contact-container">
+    <h2>Let's get in touch!</h2>
+    <p>Feel free to reach out to me by submitting this form or through my
+      <a href="https://www.linkedin.com/in/jakub-norton-2a0a3a196/" target="_blank">LinkedIn 
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    </p>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <label >Name:</label>
+      <input id="name" type="text" formControlName="name" placeholder="Name"/>
+      <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+        <small class="error">Name is required.</small>
       </div>
-      <ng-template #submitText>Submit</ng-template>
-    </button>
-  </form>
-   
-</div>
-  
+      <label>Email:</label>
+      <input type="email" formControlName="email" placeholder="Email" />
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+        <small class="error" *ngIf="contactForm.get('email')?.hasError('required')">Email is required.</small>
+        <small class="error" *ngIf="contactForm.get('email')?.hasError('email')">Invalid email address.</small>
+      </div>
+      <label>Message:</label>
+      <textarea formControlName="message" placeholder="Message"></textarea>
+      <small class="error" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">
+        Message is required.
+      </small>
+      <button type="submit">
+        <div *ngIf="messageSent; else submitText">
+          Thanks for reaching out!
+        </div>
+        <ng-template #submitText>Submit</ng-template>
+      </button>
+    </form>
+     
+  </div>
+</section>
