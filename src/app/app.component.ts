@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { CareerComponent } from './career/career.component';
 import { ContactComponent } from './contact/contact.component';
+import { TechnologiesComponent } from './technologies/technologies.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { ContactComponent } from './contact/contact.component';
   imports: [RouterOutlet, 
     HomeComponent, 
     CareerComponent,
-    ContactComponent
+    ContactComponent,
+    TechnologiesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
