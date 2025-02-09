@@ -13,8 +13,8 @@ a{
     color: var(--white);
     text-decoration: none;
     margin: 10px 20px;
-    display: flex;  /* Makes <a> a flex container */
-    align-items: center; /* Vertically centers icons inside */
+    display: flex; 
+    align-items: center;
     justify-content: center;
 }
 
